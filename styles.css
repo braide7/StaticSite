@@ -1,0 +1,75 @@
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #1a1a1a, #2b2b2b);
+    font-family: Arial, sans-serif;
+    color: #ffffff;
+}
+
+.container {
+    text-align: center;
+}
+.logo-icon
+{
+    margin: 0 auto;
+    width: 450px;
+    height: 450px;
+    background: url("src/appLogo.png") no-repeat center;
+    background-size: cover;
+    transform-style: preserve-3d;
+    
+}
+
+h1 {
+    font-size: 2.5em;
+    margin: 1rem 0 4rem;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+}
+.title
+{
+    font-size: 3rem;
+}
+.download-link {
+    text-decoration: none;
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    padding: 0; /* Remove any padding */
+    margin: 0;
+    
+}
+
+.file-icon {
+    margin: 0 auto;
+    width: 100px;
+    height: 100px;
+    background: url("src/folder.png") no-repeat center;
+    background-size: cover;
+    transform-style: preserve-3d;
+    animation: float 5s ease-in-out infinite;
+    transition: transform 0.3s ease;
+
+}
+
+.file-icon:hover {
+    transform: scale(1.1) translateY(-10px);
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0) rotateX(10deg) rotateY(10deg);
+    }
+    50% {
+        transform: translateY(-20px) rotateX(10deg) rotateY(10deg);
+    }
+}
+
+p {
+    margin-top: 20px;
+    font-size: 1.2em;
+    color: #cccccc;
+}
