@@ -1,10 +1,10 @@
 body {
     margin: 0;
     padding: 0;
-    height: 100vh;
+    min-height: 100vh; /* Changed from height to allow overflow */
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: center; /* Still centers vertically if content fits */
     background: linear-gradient(135deg, #1a1a1a, #2b2b2b);
     font-family: Arial, sans-serif;
     color: #ffffff;
@@ -12,16 +12,16 @@ body {
 
 .container {
     text-align: center;
+    padding: 20px; /* Add padding to prevent edge clipping */
 }
-.logo-icon
-{
+
+.logo-icon {
     margin: 0 auto;
     width: 450px;
     height: 450px;
     background: url("src/appLogo.png") no-repeat center;
     background-size: cover;
     transform-style: preserve-3d;
-    
 }
 
 h1 {
@@ -29,18 +29,18 @@ h1 {
     margin: 1rem 0 4rem;
     text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
 }
-.title
-{
+
+.title {
     font-size: 3rem;
 }
+
 .download-link {
     text-decoration: none;
     display: inline-block;
     width: 100px;
     height: 100px;
-    padding: 0; /* Remove any padding */
+    padding: 0;
     margin: 0;
-    
 }
 
 .file-icon {
@@ -52,7 +52,6 @@ h1 {
     transform-style: preserve-3d;
     animation: float 5s ease-in-out infinite;
     transition: transform 0.3s ease;
-
 }
 
 .file-icon:hover {
@@ -72,4 +71,39 @@ p {
     margin-top: 20px;
     font-size: 1.2em;
     color: #cccccc;
+}
+
+/* Media Query for Mobile */
+@media (max-width: 768px) {
+    .logo-icon {
+        width: 200px; /* Reduce size on mobile */
+        height: 200px;
+    }
+
+    h1 {
+        font-size: 1.5em; /* Smaller title */
+        margin: 0.5rem 0 2rem; /* Less margin */
+    }
+
+    .title {
+        font-size: 2rem; /* Smaller .title */
+    }
+
+    .file-icon {
+        width: 80px; /* Slightly smaller file icon */
+        height: 80px;
+    }
+
+    .download-link {
+        width: 80px; /* Match file-icon */
+        height: 80px;
+    }
+
+    p {
+        font-size: 1em; /* Smaller text */
+    }
+
+    .container {
+        padding: 10px; /* Less padding on mobile */
+    }
 }
